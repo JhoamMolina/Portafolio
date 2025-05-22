@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional portfolio of Jhoam Molina, a Tech Lead & Senior Frontend Engineer specializing in React, TypeScript, and React Native"
+    />
+
+    <title>Jhoam Molina | Frontend Engineer & Tech Lead</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container header-container">
+        <a href="#" class="logo">Jhoam<span>Molina</span></a>
+
+        <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+
+        <nav class="nav-menu">
+          <button class="nav-close" aria-label="Close menu">&times;</button>
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">Tech Lead & Frontend Engineer</h1>
+            <p class="hero-subtitle">
+              Building scalable applications with React, TypeScript, and React
+              Native. Leading teams to deliver high-impact features for
+              healthcare, AI, and finance startups.
+            </p>
+            <div class="hero-buttons">
+              <a href="#portfolio" class="btn btn-primary">View Projects</a>
+              <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="assets/img/profile.webp"
+              alt="Jhoam Molina"
+              width="400"
+              height="400"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content">
+            <img
+              src="assets/img/profile.webp"
+              alt="Jhoam Molina"
+              class="about-image"
+              width="250"
+              height="250"
+              loading="lazy"
+            />
+            <div class="about-text">
+              <h3>Hello! I'm Jhoam Molina</h3>
+              <p>
+                I'm a Frontend Engineer & Tech Lead with over 4 years of
+                experience building scalable applications using React, Next.js,
+                TypeScript, and React Native. I've led cross-functional teams
+                and delivered high-impact features for startups in healthcare,
+                AI, and finance.
+              </p>
+              <p>
+                As an advocate for clean code, agile workflows, and quick
+                deliveries, I'm experienced with AI-powered tools like ChatGPT,
+                GitHub Copilot, Cursor, and Cline. I'm fluent in English and
+                have extensive experience with asynchronous remote work.
+              </p>
+              <div class="about-skills">
+                <span class="btn btn-outline mb-2 mr-2">React</span>
+                <span class="btn btn-outline mb-2 mr-2">TypeScript</span>
+                <span class="btn btn-outline mb-2 mr-2">HTML & CSS</span>
+                <span class="btn btn-outline mb-2 mr-2">React Native</span>
+                <span class="btn btn-outline mb-2 mr-2">Node.js</span>
+                <span class="btn btn-outline mb-2 mr-2">AI Tools</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <div class="container">
+          <h2 class="section-title">My Services</h2>
+          <div class="grid grid-3">
+            <!-- Service 1 -->
+            <div class="service-card">
+              <img
+                src="assets/icons/frontend.webp"
+                alt="Frontend Development"
+                class="service-icon"
+                width="64"
+                height="64"
+                loading="lazy"
+              />
+              <h3>Frontend Development</h3>
+              <p>
+                I build scalable and high-performance web applications using
+                React, TypeScript, and modern frontend tools, ensuring
+                exceptional user experiences.
+              </p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+              <img
+                src="assets/icons/mobile.webp"
+                alt="Mobile Development"
+                class="service-icon"
+                width="64"
+                height="64"
+                loading="lazy"
+              />
+              <h3>Mobile Development</h3>
+              <p>
+                I develop cross-platform mobile applications with React Native
+                that deliver native-like experiences while maintaining
+                consistent design and performance.
+              </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+              <img
+                src="assets/icons/tech-lead.webp"
+                alt="Tech Leadership"
+                class="service-icon"
+                width="64"
+                height="64"
+                loading="lazy"
+              />
+              <h3>Tech Leadership</h3>
+              <p>
+                I lead development teams, mentor junior developers, and
+                implement best practices like SOLID and DRY principles to
+                improve code quality and delivery speed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section">
+        <div class="container">
+          <h2 class="section-title">My Portfolio</h2>
+          <div class="portfolio-filters">
+            <button class="portfolio-filter active">All</button>
+            <button class="portfolio-filter">React</button>
+            <button class="portfolio-filter">React Native</button>
+            <button class="portfolio-filter">TypeScript</button>
+          </div>
+          <div class="grid grid-2">
+            <!-- Portfolio Item 1 -->
+            <div class="card">
+              <img
+                src="assets/img/project1.webp"
+                alt="Notary.io"
+                class="card-img"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Notary.io</h3>
+                <p class="card-text">
+                  Led frontend architecture for a digital notary platform using
+                  React and TypeScript, focusing on secure document handling and
+                  intuitive user flows.
+                </p>
+                <a href="#" class="btn btn-outline">View Details</a>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div class="card">
+              <img
+                src="assets/img/project2.webp"
+                alt="Canadian Orthodontic Partners"
+                class="card-img"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Canadian Orthodontic Partners</h3>
+                <p class="card-text">
+                  Developed web and mobile components ensuring design
+                  consistency and performance across platforms for a nationwide
+                  orthodontic practice.
+                </p>
+                <a href="#" class="btn btn-outline">View Details</a>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div class="card">
+              <img
+                src="assets/img/project3.webp"
+                alt="Groundlight AI Dashboard"
+                class="card-img"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Groundlight AI Dashboard</h3>
+                <p class="card-text">
+                  Built an AI dashboard using React, TypeScript, and charting
+                  libraries to visualize complex datasets with high-performance
+                  interfaces.
+                </p>
+                <a href="#" class="btn btn-outline">View Details</a>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 4 -->
+            <div class="card">
+              <img
+                src="assets/img/project4.webp"
+                alt="DocBraces"
+                class="card-img"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <div class="card-content">
+                <h3 class="card-title">DocBraces</h3>
+                <p class="card-text">
+                  Created contract generation tools for orthodontic clinics
+                  using React, Node, and MongoDB, with intuitive interfaces and
+                  patient workflows.
+                </p>
+                <a href="#" class="btn btn-outline">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <div class="container">
+          <h2 class="section-title">Contact</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <h3>Contact Information</h3>
+              <p>
+                Ready to collaborate on your next project? Let's discuss how my
+                expertise in frontend development and tech leadership can help
+                bring your vision to life.
+              </p>
+
+              <div class="contact-item">
+                <div class="contact-icon">&#9993;</div>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:molina_504@hotmail.com"
+                    >molina_504@hotmail.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">&#128222;</div>
+                <div>
+                  <h4>Phone</h4>
+                  <a href="tel:+573156108183">+57 3156108183</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">&#128205;</div>
+                <div>
+                  <h4>Location</h4>
+                  <p>Cali, Colombia</p>
+                </div>
+              </div>
+
+              <div class="social-icons mt-3">
+                <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+                <a href="#" class="social-icon" aria-label="GitHub">gh</a>
+                <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                <a href="#" class="social-icon" aria-label="Instagram">ig</a>
+              </div>
+            </div>
+
+            <form
+              class="contact-form"
+              action="mailto:molina_504@hotmail.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary full-width">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <a href="#" class="footer-logo">Jhoam<span>Molina</span></a>
+
+        <div class="footer-links">
+          <a href="#home" class="footer-link">Home</a>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#services" class="footer-link">Services</a>
+          <a href="#portfolio" class="footer-link">Portfolio</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
+
+        <div class="footer-social">
+          <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-icon" aria-label="GitHub">gh</a>
+          <a href="#" class="social-icon" aria-label="Twitter">t</a>
+          <a href="#" class="social-icon" aria-label="Instagram">ig</a>
+        </div>
+
+        <p class="footer-copy">
+          &copy; 2024 Jhoam Molina. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
