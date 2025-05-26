@@ -38,7 +38,7 @@
 
         <nav class="nav-menu">
           <button class="nav-close" aria-label="Close menu">&times;</button>
-          <a href="#home" class="nav-link active">Home</a>
+          <a href="#home" class="nav-link">Home</a>
           <a href="#about" class="nav-link">About</a>
           <a href="#services" class="nav-link">Services</a>
           <a href="#portfolio" class="nav-link">Portfolio</a>
@@ -1067,3 +1067,65 @@
     </footer>
   </body>
 </html>
+
+<script>
+  // Optimized JavaScript for navigation highlighting with throttling
+  // This script updates the active navigation link based on the current section in view
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section[id]");
+    let ticking = false;
+
+    // Function to update active navigation link
+    function updateActiveNav() {
+      let current = "";
+
+      // Check which section is currently in view
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+
+        // Check if section is in viewport (with some offset for header)
+        if (window.scrollY >= sectionTop - 100) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      // Update navigation links
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+
+      // If no section is in view or at the top, highlight home
+      if (!current || window.scrollY < 100) {
+        navLinks.forEach((link) => link.classList.remove("active"));
+        document
+          .querySelector('.nav-link[href="#home"]')
+          .classList.add("active");
+      }
+    }
+
+    // Throttled scroll handler using requestAnimationFrame
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateActiveNav();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+
+    // Update on scroll (throttled)
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    // Update on hash change (when clicking nav links)
+    window.addEventListener("hashchange", updateActiveNav);
+
+    // Initial update
+    updateActiveNav();
+  });
+</script>

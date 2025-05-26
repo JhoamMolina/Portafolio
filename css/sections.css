@@ -110,6 +110,35 @@
   width: 100%;
 }
 
+/* Navigation highlighting - works with JavaScript */
+/* The active class is dynamically added by JavaScript based on scroll position */
+
+/* Smooth scroll behavior for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add a subtle animation when sections come into view */
+section {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Optional: Add a subtle highlight effect when sections are targeted */
+section:target {
+  animation: sectionHighlight 0.5s ease-in-out;
+}
+
+@keyframes sectionHighlight {
+  0% { 
+    opacity: 0.8;
+    transform: translateY(10px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (min-width: 768px) {
   .nav-toggle, 
   .nav-close {
