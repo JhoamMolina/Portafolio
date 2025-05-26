@@ -258,20 +258,13 @@ a:hover {
 }
 
 .hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at top right, rgba(100, 255, 218, 0.1), transparent 60%);
-  z-index: 0;
+  /* This is now handled in sections.css */
 }
 
 /* SVG shape accents */
 .shape-accent {
   position: absolute;
-  z-index: -1;
+  z-index: 1; /* Adjusted to show on top of background but below content */
   opacity: 0.15;
 }
 
