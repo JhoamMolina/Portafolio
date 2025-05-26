@@ -129,6 +129,171 @@
   width: 64px;
   height: 64px;
   margin: 0 auto var(--spacing-md);
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+/* Service Card SVG Animations */
+.service-card svg {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: drop-shadow(0 4px 8px rgba(100, 255, 218, 0.2));
+}
+
+.service-card:hover svg {
+  transform: scale(1.15) rotate(5deg);
+  filter: drop-shadow(0 8px 16px rgba(100, 255, 218, 0.4));
+}
+
+/* Frontend Development Icon Animations */
+.service-card:nth-child(1) svg ellipse {
+  animation: reactAtomSpin 3s linear infinite;
+  transform-origin: 70px 40px;
+}
+
+.service-card:nth-child(1) svg ellipse:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.service-card:nth-child(1) svg ellipse:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+.service-card:nth-child(1) svg ellipse:nth-of-type(3) {
+  animation-delay: 2s;
+}
+
+.service-card:nth-child(1):hover svg ellipse {
+  animation-duration: 1s;
+}
+
+/* Mobile Development Icon Animations */
+.service-card:nth-child(2) svg rect[opacity="0.6"] {
+  animation: appIconPulse 2s ease-in-out infinite alternate;
+}
+
+.service-card:nth-child(2) svg rect[opacity="0.6"]:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.service-card:nth-child(2) svg rect[opacity="0.6"]:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+
+.service-card:nth-child(2) svg rect[opacity="0.6"]:nth-of-type(3) {
+  animation-delay: 1s;
+}
+
+.service-card:nth-child(2) svg rect[opacity="0.6"]:nth-of-type(4) {
+  animation-delay: 1.5s;
+}
+
+/* Tech Leadership Icon Animations */
+.service-card:nth-child(3) svg line {
+  animation: connectionPulse 2s ease-in-out infinite;
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+}
+
+.service-card:nth-child(3) svg line:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.service-card:nth-child(3) svg line:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+
+.service-card:nth-child(3) svg line:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+
+.service-card:nth-child(3) svg line:nth-of-type(4) {
+  animation-delay: 0.9s;
+}
+
+.service-card:nth-child(3) svg circle[fill="none"] {
+  animation: nodeGlow 2s ease-in-out infinite alternate;
+}
+
+/* Keyframe Animations */
+@keyframes reactAtomSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes appIconPulse {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes connectionPulse {
+  0% {
+    stroke-dashoffset: 20;
+    opacity: 0.3;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    opacity: 0.8;
+  }
+  100% {
+    stroke-dashoffset: -20;
+    opacity: 0.3;
+  }
+}
+
+@keyframes nodeGlow {
+  0% {
+    stroke-width: 2;
+    filter: drop-shadow(0 0 3px rgba(100, 255, 218, 0.3));
+  }
+  100% {
+    stroke-width: 3;
+    filter: drop-shadow(0 0 8px rgba(100, 255, 218, 0.8));
+  }
+}
+
+/* Service Card Background Enhancement */
+.service-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(100, 255, 218, 0.05) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Enhanced hover effects for service cards */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(100, 255, 218, 0.15);
+  border: 1px solid rgba(100, 255, 218, 0.2);
 }
 
 /* Forms */
