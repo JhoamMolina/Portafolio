@@ -359,13 +359,6 @@ section:target {
   overflow: hidden;
 }
 
-.portfolio-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-lg);
-  justify-content: center;
-}
 
 .portfolio-filter {
   padding: 0.5rem 1rem;
