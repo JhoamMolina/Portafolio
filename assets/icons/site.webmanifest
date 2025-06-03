@@ -1,0 +1,20 @@
+{
+  "name": "Jhoam Molina - Frontend Engineer & Tech Lead",
+  "short_name": "Jhoam Molina",
+  "description": "Professional portfolio of Jhoam Molina, Frontend Engineer & Tech Lead specializing in React, TypeScript, and React Native",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "theme_color": "#64FFDA",
+  "background_color": "#1a1a1a",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["portfolio", "developer", "frontend", "react", "typescript"]
+}
