@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://jhoammolina.dev/sitemap.xml
+Sitemap: https://portafolio-roan-beta-82.vercel.app/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
